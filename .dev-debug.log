@@ -1,0 +1,31 @@
+
+> steiner-finance-companion@0.1.0 dev
+> next dev --turbopack
+
+   ▲ Next.js 15.5.20 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.1.241.130:3000
+
+ ✓ Starting...
+ ✓ Compiled middleware in 267ms
+ ✓ Ready in 1363ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.5s
+ GET / 200 in 2951ms
+ ✓ Compiled /chapters/[slug] in 295ms
+ GET /chapters/3 200 in 1007ms
+ GET /chapters/1 200 in 228ms
+ GET /chapters/2 200 in 245ms
+ ✓ Compiled / in 16ms
+ GET / 200 in 229ms
+ GET / 200 in 236ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 540ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 850ms
+ ✓ Compiled /chapters/[slug] in 40ms
+ GET /chapters/3 200 in 101ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 243ms
+ ✓ Compiled in 255ms
+ ✓ Compiled /chapters/[slug] in 27ms
+ GET /chapters/3 200 in 254ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 240ms

@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f5f0;
+  --foreground: #1a1a1a;
+  --paper: #fbfaf7;
+  --ink-50: #f3f2ee;
+  --ink-100: #e8e6df;
+  --ink-200: #d4d0c4;
+  --ink-300: #b8b3a4;
+  --ink-500: #6b665c;
+  --ink-600: #524e46;
+  --ink-700: #3d3a34;
+  --ink-800: #2a2824;
+  --ink-900: #1a1a1a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-paper: var(--paper);
+  --color-ink-50: var(--ink-50);
+  --color-ink-100: var(--ink-100);
+  --color-ink-200: var(--ink-200);
+  --color-ink-300: var(--ink-300);
+  --color-ink-500: var(--ink-500);
+  --color-ink-600: var(--ink-600);
+  --color-ink-700: var(--ink-700);
+  --color-ink-800: var(--ink-800);
+  --color-ink-900: var(--ink-900);
+  --font-sans: var(--font-source-serif), ui-serif, Georgia, "Times New Roman", serif;
+  --font-mono: var(--font-ibm-mono), ui-monospace, "Cascadia Code", monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.55;
+}
+
+/* Textbook-like form fields */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.8125rem;
+  color: var(--ink-700);
+}
+
+.field span {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.field input,
+.field select {
+  border: 1px solid var(--ink-200);
+  background: #fff;
+  padding: 0.4rem 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--ink-900);
+}
+
+.field input:focus,
+.field select:focus {
+  outline: 2px solid var(--ink-300);
+  outline-offset: 1px;
+}
+
+.calc-card {
+  border: 1px solid var(--ink-200);
+  background: #fff;
+  padding: 1rem 1.15rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.calc-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--ink-900);
+}
+
+.calc-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+}
+
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.result-table th,
+.result-table td {
+  border: 1px solid var(--ink-200);
+  padding: 0.45rem 0.6rem;
+  text-align: left;
+}
+
+.result-table th {
+  background: var(--ink-50);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-600);
+}
+
+.result-table .num {
+  text-align: right;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.tab-btn {
+  border: 1px solid var(--ink-300);
+  background: #fff;
+  padding: 0.3rem 0.65rem;
+  color: var(--ink-700);
+}
+
+.tab-btn.active {
+  background: var(--ink-900);
+  border-color: var(--ink-900);
+  color: #fff;
+}
+
+.btn-secondary {
+  border: 1px solid var(--ink-300);
+  background: #fff;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--ink-800);
+}
+
+.btn-secondary:hover {
+  background: var(--ink-50);
+}
+
+.btn-primary {
+  border: 1px solid var(--ink-900);
+  background: var(--ink-900);
+  padding: 0.45rem 0.9rem;
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--ink-800);
+}
+
+.prose-textbook p {
+  margin-bottom: 0.85rem;
+}
+
+.prose-textbook ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 0.85rem;
+}
+
+.prose-textbook li {
+  margin-bottom: 0.25rem;
+}
+
+.auth-card {
+  max-width: 24rem;
+  margin: 2rem auto;
+  border: 1px solid var(--ink-200);
+  background: #fff;
+  padding: 1.5rem;
+}
+
+.chapter-toc a {
+  color: var(--ink-800);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.badge {
+  display: inline-block;
+  border: 1px solid var(--ink-200);
+  background: var(--ink-50);
+  padding: 0.1rem 0.45rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-600);
+}
