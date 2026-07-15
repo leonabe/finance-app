@@ -49,11 +49,11 @@ export function days360(
 ): number {
   const s = parseIsoDate(start);
   const e = parseIsoDate(end);
-  let y1 = s.getUTCFullYear();
-  let m1 = s.getUTCMonth() + 1;
+  const y1 = s.getUTCFullYear();
+  const m1 = s.getUTCMonth() + 1;
   let d1 = s.getUTCDate();
-  let y2 = e.getUTCFullYear();
-  let m2 = e.getUTCMonth() + 1;
+  const y2 = e.getUTCFullYear();
+  const m2 = e.getUTCMonth() + 1;
   let d2 = e.getUTCDate();
 
   if (method === "EU") {
