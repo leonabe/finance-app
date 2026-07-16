@@ -47,7 +47,7 @@ Without Supabase env vars, learning content still works; sign-in/up reports that
 
 This is a standard **Next.js App Router** app. In-repo `vercel.json` sets `framework: nextjs` and `buildCommand: npm run build` (no SPA rewrites, no static `outputDirectory`).
 
-On the Vercel project dashboard, confirm:
+### Required project settings
 
 1. **Framework Preset:** Next.js (not “Other”)
 2. **Root Directory:** repository root (where `package.json` and `vercel.json` live)
@@ -55,8 +55,16 @@ On the Vercel project dashboard, confirm:
 4. **Output Directory:** leave **empty** (do not set `out`, `public`, or `.next`)
 5. **Install Command:** `npm install`
 6. **Node.js:** 18.x or 20.x
+7. **Production Domain:** attach your `*.vercel.app` domain to **this** Next.js project (not an older static/Angular project)
+8. **Deployment Protection:** turn off or allow public access if the site should be open without a Vercel login
 
 Optional env vars for auth only: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`. The site serves without them.
+
+### Known 404 / blank-site traps
+
+- A catch-all rewrite like `"/(.*)" → "/$1"` or to `index.html` breaks App Router (removed from this repo).
+- Pointing the production domain at a **different** Vercel project (e.g. an old static SPA with `<app-root>`) will keep serving that app even when this Next.js repo deploys successfully.
+- Deployment Protection shows a Vercel **Login** page instead of the app for unauthenticated visitors.
 
 ## Structure
 
