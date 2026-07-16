@@ -43,6 +43,21 @@ Without Supabase env vars, learning content still works; sign-in/up reports that
 | `npm test` | Unit tests (finance math + auth) |
 | `npm run lint` | ESLint |
 
+## Deploy (Vercel)
+
+This is a standard **Next.js App Router** app. In-repo `vercel.json` sets `framework: nextjs` and `buildCommand: npm run build` (no SPA rewrites, no static `outputDirectory`).
+
+On the Vercel project dashboard, confirm:
+
+1. **Framework Preset:** Next.js (not “Other”)
+2. **Root Directory:** repository root (where `package.json` and `vercel.json` live)
+3. **Build Command:** `npm run build` (or leave default)
+4. **Output Directory:** leave **empty** (do not set `out`, `public`, or `.next`)
+5. **Install Command:** `npm install`
+6. **Node.js:** 18.x or 20.x
+
+Optional env vars for auth only: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`. The site serves without them.
+
 ## Structure
 
 ```
